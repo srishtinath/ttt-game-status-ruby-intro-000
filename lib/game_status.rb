@@ -16,16 +16,22 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.each do |win_combination|
-    value_1 = board[win_combination[0]]
-    value_2 = board[win_combination[1]]
-    value_3 = board[win_combination[2]]
+  WIN_COMBINATIONS.each {|win_combination|
+    index_0 = win_combo[0]
+    index_1 = win_combo[1]
+    index_2 = win_combo[2]
 
-      if (value_1 == "X" && value_2 == "X" && value_3 == "X") || (value_1 == "O" && value_2 == "O" && value_3 == "O")
-          return win_combination
-      end #close if statement
+    position_1 = board[index_0]
+    position_2 = board[index_1]
+    position_3 = board[index_2]
 
-  end #close do..end iteration outside
+    if position_1 == "X" && position_2 == "X" && position_3 == "X"
+      return win_combo
+    elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
+      return win_combo
+    end
+  } #close do..end iteration outside
+  return false
 end # close def
 # need to figure out empty board and draw
 
