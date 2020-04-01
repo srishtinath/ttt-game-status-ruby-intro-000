@@ -23,7 +23,7 @@ def won?(board)
 
     if (value_1 == "X" && value_2 == "X" && value_3 == "X") || (value_1 == "O" && value_2 == "O" && value_3 == "O")
       return win_combination
-    else
+    elsif !(value_1 == "X" && value_2 == "X" && value_3 == "X") && !(value_1 == "O" && value_2 == "O" && value_3 == "O")
       return false
     end #close if statement
 
