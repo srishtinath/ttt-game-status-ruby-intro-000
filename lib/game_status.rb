@@ -16,7 +16,7 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.each do |win_combination|
+  WIN_COMBINATIONS.each { |win_combination|
     value_1 = board[win_combination[0]]
     value_2 = board[win_combination[1]]
     value_3 = board[win_combination[2]]
@@ -25,7 +25,7 @@ def won?(board)
           return win_combination
       end #close if statement
     
-  end #close do..end iteration outside
+  }
 end # close def
 # need to figure out empty board and draw
 
