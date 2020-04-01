@@ -22,11 +22,7 @@ def won?(board)
     value_3 = board[win_combination[2]]
 
       if (value_1 == "X" && value_2 == "X" && value_3 == "X") || (value_1 == "O" && value_2 == "O" && value_3 == "O")
-        if value_1 == " " || value_1.nil? || value_2 == " " || value_2.nil? || value_3 == " " || value_3.nil?
-          false
-        else
           return win_combination
-        end
       end #close if statement
 
   end #close do..end iteration outside
