@@ -31,7 +31,6 @@ def won?(board)
         return false
       end #close if statement
 
-    end #close if loop
   end #close do..end iteration outside
 end # close def
 # need to figure out empty board and draw
