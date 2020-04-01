@@ -21,7 +21,7 @@ def won?(board)
   value_2 = board[win_combination[1]]
   value_3 = board[win_combination[2]]
 
-    if (win_combination.all? {|detail| position_taken?(board, detail)} && ((value_1 == "X" && value_2 == "X" && value_3 == "X") || (value_1 == "O" && value_2 == "O" && value_3 == "O")))
+    if (value_1 == "X" && value_2 == "X" && value_3 == "X") || (value_1 == "O" && value_2 == "O" && value_3 == "O")
       return win_combination
     elsif value_1 + value_2 + value_3 == 0
       return false
