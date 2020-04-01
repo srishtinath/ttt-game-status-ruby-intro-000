@@ -27,8 +27,6 @@ def won?(board)
         else
           return win_combination
         end
-      elsif !(value_1 == "X" && value_2 == "X" && value_3 == "X") && !(value_1 == "O" && value_2 == "O" && value_3 == "O")
-        return false
       end #close if statement
 
   end #close do..end iteration outside
