@@ -21,14 +21,14 @@ def won?(board)
     value_2 = board[win_combination[1]]
     value_3 = board[win_combination[2]]
 
-    if position_1 == position_2 && position_2 == position_3 && position_taken?(board, win_index_1)
+    if position_1 == position_2 && position_2 == position_3 && position_taken?(board, value_1)
       #if (value_1 == "X" && value_2 == "X" && value_3 == "X") || (value_1 == "O" && value_2 == "O" && value_3 == "O")
       #  return win_combination
       #elsif !(value_1 == "X" && value_2 == "X" && value_3 == "X") && !(value_1 == "O" && value_2 == "O" && value_3 == "O")
       #  return false
       # end #close if statement
       return win_combination
-    elsif !(position_1 == position_2 && position_2 == position_3 && position_taken?(board, win_index_1))
+    elsif !(position_1 == position_2 && position_2 == position_3 && position_taken?(board, value_1))
       return false
     end #close if loop
   end #close do..end iteration outside
