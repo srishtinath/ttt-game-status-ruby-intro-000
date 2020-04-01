@@ -26,6 +26,7 @@ def won?(board)
       end #close if statement
 
   }
+  return false
 end # close def
 # need to figure out empty board and draw
 
