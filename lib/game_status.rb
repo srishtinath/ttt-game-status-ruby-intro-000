@@ -17,19 +17,19 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.each do |win_combination|
-   win_index_1 = win_combination[0]
-   win_index_2 = win_combination[1]
-   win_index_3 = win_combination[2]
-   position_1 = board[win_index_1] # value of board at win_index_1
-   position_2 = board[win_index_2] # value of board at win_index_2
-   position_3 = board[win_index_3] # value of board at win_index_3
-   if position_1 == position_2 && position_2 == position_3 && position_taken?(board, win_index_1)
-     return win_combination
-   else
-     return falsey
-   end
- end
-end
+  value_1 = board[win_combination[0]]
+  value_2 = board[win_combination[1]]
+  value_3 = board[win_combination[2]]
+
+  if (win_combination.all? {|detail| position_taken?(board, detail)} && ((value_1 == "X" && value_2 == "X" && value_3 == "X") || (value_1 == "O" && value_2 == "O" && value_3 == "O")))
+      return win_combination
+
+    end #close if statement
+
+
+  end #close do..end iteration outside
+
+end # close def
 # need to figure out empty board and draw
 
 def full?(board)
