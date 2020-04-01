@@ -28,7 +28,7 @@ def won?(board)
           return win_combination
         end
       else
-        return false
+        false
       end #close if statement
 
   end #close do..end iteration outside
